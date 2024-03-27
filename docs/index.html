@@ -1,42 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>BT-TS-ELMO-IELE-PELE</title>
-	<style>
-		/* On définit la taille des images affichées */
-		img {
-			max-width: 50%;
-			max-height: 50%;
-		}
-	</style>
-	<link href=" https://cdn.jsdelivr.net/npm/bootswatch@5.2.3/dist/cerulean/bootstrap.min.css " rel="stylesheet">
+    <title>BT-TS-ELMO-IELE-PELE</title>
+    <style>
+        img {
+            max-width: 50%;
+            max-height: 50%;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.2.3/dist/cerulean/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-	<!-- On crée un bouton pour passer à l'image suivante 
-	<button id="suivant">Suivant</button>-->
-	<div class="d-grid gap-2">
-		<button id="suivant" class="btn btn-lg btn-primary" type="button">Question suivante</button>
-	</div>
-	<div class="d-grid gap-2">
-		<button id="suivalea" class="btn btn-lg btn-danger" type="button">Question aléatoire</button>
-	</div>	
-	<!-- On crée un conteneur pour les images -->
-	<div>Pour voir la réponse, il faut cliquer sur la zone de la question</div>
-	<div>
-		<p> Question : <span id="index" ></span</p>
-	</div>	
-	<div id="galerie">
-	</div>
-
-
-	
-	  
-	  
-	<script>
-		// On définit les tableaux contenant les images du recto de la filpcard
-		
-    		// Tableau des images
-		var images = ["images/1_2014_TS_IEL_question_page_1.png",
+    <div class="d-grid gap-2">
+        <button id="suivant" class="btn btn-lg btn-primary" type="button">Question suivante</button>
+    </div>
+    <div class="d-grid gap-2">
+        <button id="suivalea" class="btn btn-lg btn-danger" type="button">Question al�atoire</button>
+    </div>
+    <div>Pour voir la r�ponse, il faut cliquer sur la zone de la question</div>
+    <div>
+        <p> Question : <span id="index" ></span></p>
+    </div>
+    <div id="galerie">
+    </div>
+    <script>
+        var images = [
+            "images/1_1711550629_question_EM_Pos_7_TS_PQ22_page_2.png",
+"images/1_2014_TS_IEL_question_page_1.png",
 "images/1_question_2013c_TS_IEL_page_2.png",
 "images/1_question_2013_IELE_BT_exp_page_2.png",
 "images/1_question_2014c_BT_IEL_page_2.png",
@@ -47,6 +37,7 @@
 "images/1_question_2016_IELE_TS_page_2.png",
 "images/1_question_2017_ELM_BT_page_2.png",
 "images/1_question_2017_IELE_BT.png",
+"images/2_1711550629_question_EM_Pos_7_TS_PQ22_page_2.png",
 "images/2_2014_TS_IEL_question_page_1.png",
 "images/2_question_2013c_TS_IEL_page_2.png",
 "images/2_question_2013_IELE_BT_exp_page_2.png",
@@ -58,6 +49,7 @@
 "images/2_question_2016_IELE_TS_page_2.png",
 "images/2_question_2017_ELM_BT_page_2.png",
 "images/2_question_2017_IELE_BT.png",
+"images/3_1711550629_question_EM_Pos_7_TS_PQ22_page_3.png",
 "images/3_2014_TS_IEL_question_page_1.png",
 "images/3_question_2013c_TS_IEL_page_2.png",
 "images/3_question_2013_IELE_BT_exp_page_3.png",
@@ -69,6 +61,7 @@
 "images/3_question_2016_IELE_TS_page_3.png",
 "images/3_question_2017_ELM_BT_page_2.png",
 "images/3_question_2017_IELE_BT.png",
+"images/4_1711550629_question_EM_Pos_7_TS_PQ22_page_4.png",
 "images/4_2014_TS_IEL_question_page_2.png",
 "images/4_question_2013c_TS_IEL_page_3.png",
 "images/4_question_2013_IELE_BT_exp_page_3.png",
@@ -80,6 +73,7 @@
 "images/4_question_2016_IELE_TS_page_3.png",
 "images/4_question_2017_ELM_BT_page_3.png",
 "images/4_question_2017_IELE_BT.png",
+"images/5_1711550629_question_EM_Pos_7_TS_PQ22_page_5.png",
 "images/5_2014_TS_IEL_question_page_3.png",
 "images/5_question_2013c_TS_IEL_page_3.png",
 "images/5_question_2013_IELE_BT_exp_page_4.png",
@@ -91,6 +85,7 @@
 "images/5_question_2016_IELE_TS_page_4.png",
 "images/5_question_2017_ELM_BT_page_3.png",
 "images/5_question_2017_IELE_BT.png",
+"images/6_1711550629_question_EM_Pos_7_TS_PQ22_page_6.png",
 "images/6_2014_TS_IEL_question_page_3.png",
 "images/6_question_2013c_TS_IEL_page_3.png",
 "images/6_question_2013_IELE_BT_exp_page_4.png",
@@ -102,6 +97,7 @@
 "images/6_question_2016_IELE_TS_page_4.png",
 "images/6_question_2017_ELM_BT_page_3.png",
 "images/6_question_2017_IELE_BT.png",
+"images/7_1711550629_question_EM_Pos_7_TS_PQ22_page_7.png",
 "images/7_2014_TS_IEL_question_page_4.png",
 "images/7_question_2013c_TS_IEL_page_4.png",
 "images/7_question_2013_IELE_BT_exp_page_5.png",
@@ -113,6 +109,7 @@
 "images/7_question_2016_IELE_TS_page_4.png",
 "images/7_question_2017_ELM_BT_page_4.png",
 "images/7_question_2017_IELE_BT.png",
+"images/8_1711550629_question_EM_Pos_7_TS_PQ22_page_7.png",
 "images/8_2014_TS_IEL_question_page_4.png",
 "images/8_question_2013c_TS_IEL_page_4.png",
 "images/8_question_2013_IELE_BT_exp_page_5.png",
@@ -124,6 +121,7 @@
 "images/8_question_2016_IELE_TS_page_5.png",
 "images/8_question_2017_ELM_BT_page_4.png",
 "images/8_question_2017_IELE_BT.png",
+"images/9_1711550629_question_EM_Pos_7_TS_PQ22_page_8.png",
 "images/9_2014_TS_IEL_question_page_5.png",
 "images/9_question_2013c_TS_IEL_page_5.png",
 "images/9_question_2013_IELE_BT_exp_page_6.png",
@@ -132,6 +130,7 @@
 "images/9_question_2016_IELE_BT_page_6.png",
 "images/9_question_2016_IELE_TS_page_5.png",
 "images/9_question_2017_ELM_BT_page_4.png",
+"images/10_1711550629_question_EM_Pos_7_TS_PQ22_page_9.png",
 "images/10_2014_TS_IEL_question_page_6.png",
 "images/10_question_2013c_TS_IEL_page_5.png",
 "images/10_question_2013_IELE_BT_page_7.png",
@@ -139,29 +138,35 @@
 "images/10_question_2016_ELM_TS_page_6.png",
 "images/10_question_2016_IELE_TS_page_6.png",
 "images/10_question_2017_ELM_BT_page_5.png",
+"images/11_1711550629_question_EM_Pos_7_TS_PQ22_page_9.png",
 "images/11_2014_TS_IEL_question_page_7.png",
 "images/11_question_2013c_TS_IEL_page_6.png",
 "images/11_question_2015_IELE_TS_page_6.png",
 "images/11_question_2016_ELM_TS_page_7.png",
 "images/11_question_2016_IELE_TS_page_7.png",
+"images/12_1711550629_question_EM_Pos_7_TS_PQ22_page_10.png",
 "images/12_2014_TS_IEL_question_page_7.png",
 "images/12_question_2013c_TS_IEL_page_7.png",
 "images/12_question_2015_IELE_TS_page_7.png",
 "images/12_question_2016_ELM_TS_page_7.png",
 "images/12_question_2016_IELE_TS_page_8.png",
+"images/13_1711550629_question_EM_Pos_7_TS_PQ22_page_10.png",
 "images/13_2014_TS_IEL_question_page_8.png",
 "images/13_question_2013c_TS_IEL_page_8.png",
 "images/13_question_2015_IELE_TS_page_7.png",
 "images/13_question_2016_ELM_TS_page_8.png",
 "images/13_question_2016_IELE_TS_page_9.png",
+"images/14_1711550629_question_EM_Pos_7_TS_PQ22_page_11.png",
 "images/14_2014_TS_IEL_question_page_8.png",
 "images/14_question_2013c_TS_IEL_page_9.png",
 "images/14_question_2015_IELE_TS_page_8.png",
 "images/14_question_2016_IELE_TS_page_9.png",
+"images/15_1711550629_question_EM_Pos_7_TS_PQ22_page_12.png",
 "images/15_2014_TS_IEL_question_page_9.png",
 "images/15_question_2013c_TS_IEL_page_10.png",
 "images/15_question_2015_IELE_TS_page_8.png",
 "images/15_question_2016_IELE_TS_page_10.png",
+"images/16_1711550629_question_EM_Pos_7_TS_PQ22_page_13.png",
 "images/16_2014_TS_IEL_question_page_10.png",
 "images/16_question_2013c_TS_IEL_page_10.png",
 "images/16_question_2015_IELE_TS_page_9.png",
@@ -174,10 +179,10 @@
 "images/18_question_2016_IELE_TS_page_13.png",
 "images/19_question_2015_PELE_TS_page_13.png",
 "images/20_question_2015_PELE_TS_page_13.png"
-		];
-
-		// Tableau des images alternatives (verso)
-		var alternateImages = ["alternate-images/1_2014_TS_IEL_reponse_page_1.png",
+        ];
+        var alternateImages = [
+            "alternate-images/1_1711550629_reponse_EM_Pos_7_TS_exp_PQ22_page_2.png",
+"alternate-images/1_2014_TS_IEL_reponse_page_1.png",
 "alternate-images/1_reponse_2013c_TS_IEL_page_2.png",
 "alternate-images/1_reponse_2013_IELE_BT_exp_page_2.png",
 "alternate-images/1_reponse_2014c_BT_IEL_page_2.png",
@@ -188,6 +193,7 @@
 "alternate-images/1_reponse_2016_IELE_TS_exp_page_2.png",
 "alternate-images/1_reponse_2017_ELM_BT_exp_page_2.png",
 "alternate-images/1_reponse_2017_IELE_BT_exp.png",
+"alternate-images/2_1711550629_reponse_EM_Pos_7_TS_exp_PQ22_page_2.png",
 "alternate-images/2_2014_TS_IEL_reponse_page_1.png",
 "alternate-images/2_reponse_2013c_TS_IEL_page_2.png",
 "alternate-images/2_reponse_2013_IELE_BT_exp_page_2.png",
@@ -199,6 +205,7 @@
 "alternate-images/2_reponse_2016_IELE_TS_exp_page_2.png",
 "alternate-images/2_reponse_2017_ELM_BT_exp_page_2.png",
 "alternate-images/2_reponse_2017_IELE_BT_exp.png",
+"alternate-images/3_1711550629_reponse_EM_Pos_7_TS_exp_PQ22_page_3.png",
 "alternate-images/3_2014_TS_IEL_reponse_page_1.png",
 "alternate-images/3_reponse_2013c_TS_IEL_page_2.png",
 "alternate-images/3_reponse_2013_IELE_BT_exp_page_3.png",
@@ -210,6 +217,7 @@
 "alternate-images/3_reponse_2016_IELE_TS_exp_page_3.png",
 "alternate-images/3_reponse_2017_ELM_BT_exp_page_2.png",
 "alternate-images/3_reponse_2017_IELE_BT_exp.png",
+"alternate-images/4_1711550629_reponse_EM_Pos_7_TS_exp_PQ22_page_4.png",
 "alternate-images/4_2014_TS_IEL_reponse_page_2.png",
 "alternate-images/4_reponse_2013c_TS_IEL_page_3.png",
 "alternate-images/4_reponse_2013_IELE_BT_exp_page_3.png",
@@ -221,6 +229,7 @@
 "alternate-images/4_reponse_2016_IELE_TS_exp_page_3.png",
 "alternate-images/4_reponse_2017_ELM_BT_exp_page_3.png",
 "alternate-images/4_reponse_2017_IELE_BT_exp.png",
+"alternate-images/5_1711550629_reponse_EM_Pos_7_TS_exp_PQ22_page_5.png",
 "alternate-images/5_2014_TS_IEL_reponse_page_3.png",
 "alternate-images/5_reponse_2013c_TS_IEL_page_3.png",
 "alternate-images/5_reponse_2013_IELE_BT_exp_page_4.png",
@@ -232,6 +241,7 @@
 "alternate-images/5_reponse_2016_IELE_TS_exp_page_4.png",
 "alternate-images/5_reponse_2017_ELM_BT_exp_page_3.png",
 "alternate-images/5_reponse_2017_IELE_BT_exp.png",
+"alternate-images/6_1711550629_reponse_EM_Pos_7_TS_exp_PQ22_page_6.png",
 "alternate-images/6_2014_TS_IEL_reponse_page_3.png",
 "alternate-images/6_reponse_2013c_TS_IEL_page_3.png",
 "alternate-images/6_reponse_2013_IELE_BT_exp_page_4.png",
@@ -243,6 +253,7 @@
 "alternate-images/6_reponse_2016_IELE_TS_exp_page_4.png",
 "alternate-images/6_reponse_2017_ELM_BT_exp_page_3.png",
 "alternate-images/6_reponse_2017_IELE_BT_exp.png",
+"alternate-images/7_1711550629_reponse_EM_Pos_7_TS_exp_PQ22_page_7.png",
 "alternate-images/7_2014_TS_IEL_reponse_page_4.png",
 "alternate-images/7_reponse_2013c_TS_IEL_page_4.png",
 "alternate-images/7_reponse_2013_IELE_BT_exp_page_5.png",
@@ -254,6 +265,7 @@
 "alternate-images/7_reponse_2016_IELE_TS_exp_page_4.png",
 "alternate-images/7_reponse_2017_ELM_BT_exp_page_4.png",
 "alternate-images/7_reponse_2017_IELE_BT_exp.png",
+"alternate-images/8_1711550629_reponse_EM_Pos_7_TS_exp_PQ22_page_7.png",
 "alternate-images/8_2014_TS_IEL_reponse_page_4.png",
 "alternate-images/8_reponse_2013c_TS_IEL_page_4.png",
 "alternate-images/8_reponse_2013_IELE_BT_exp_page_5.png",
@@ -265,6 +277,7 @@
 "alternate-images/8_reponse_2016_IELE_TS_exp_page_5.png",
 "alternate-images/8_reponse_2017_ELM_BT_exp_page_4.png",
 "alternate-images/8_reponse_2017_IELE_BT_exp.png",
+"alternate-images/9_1711550629_reponse_EM_Pos_7_TS_exp_PQ22_page_8.png",
 "alternate-images/9_2014_TS_IEL_reponse_page_5.png",
 "alternate-images/9_reponse_2013c_TS_IEL_page_5.png",
 "alternate-images/9_reponse_2013_IELE_BT_exp_page_6.png",
@@ -273,6 +286,7 @@
 "alternate-images/9_reponse_2016_IELE_BT_exp_page_6.png",
 "alternate-images/9_reponse_2016_IELE_TS_exp_page_5.png",
 "alternate-images/9_reponse_2017_ELM_BT_exp_page_4.png",
+"alternate-images/10_1711550629_reponse_EM_Pos_7_TS_exp_PQ22_page_9.png",
 "alternate-images/10_2014_TS_IEL_reponse_page_6.png",
 "alternate-images/10_reponse_2013c_TS_IEL_page_5.png",
 "alternate-images/10_reponse_2013_IELE_BT_exp_page_7.png",
@@ -280,29 +294,35 @@
 "alternate-images/10_reponse_2016_ELM_TS_exp_page_6.png",
 "alternate-images/10_reponse_2016_IELE_TS_exp_page_6.png",
 "alternate-images/10_reponse_2017_ELM_BT_exp_page_5.png",
+"alternate-images/11_1711550629_reponse_EM_Pos_7_TS_exp_PQ22_page_9.png",
 "alternate-images/11_2014_TS_IEL_reponse_page_7.png",
 "alternate-images/11_reponse_2013c_TS_IEL_page_6.png",
 "alternate-images/11_reponse_2015_IELE_TS_exp_page_6.png",
 "alternate-images/11_reponse_2016_ELM_TS_exp_page_7.png",
 "alternate-images/11_reponse_2016_IELE_TS_exp_page_7.png",
+"alternate-images/12_1711550629_reponse_EM_Pos_7_TS_exp_PQ22_page_10.png",
 "alternate-images/12_2014_TS_IEL_reponse_page_7.png",
 "alternate-images/12_reponse_2013c_TS_IEL_page_7.png",
 "alternate-images/12_reponse_2015_IELE_TS_exp_page_7.png",
 "alternate-images/12_reponse_2016_ELM_TS_exp_page_7.png",
 "alternate-images/12_reponse_2016_IELE_TS_exp_page_8.png",
+"alternate-images/13_1711550629_reponse_EM_Pos_7_TS_exp_PQ22_page_10.png",
 "alternate-images/13_2014_TS_IEL_reponse_page_8.png",
 "alternate-images/13_reponse_2013c_TS_IEL_page_8.png",
 "alternate-images/13_reponse_2015_IELE_TS_exp_page_7.png",
 "alternate-images/13_reponse_2016_ELM_TS_exp_page_8.png",
 "alternate-images/13_reponse_2016_IELE_TS_exp_page_9.png",
+"alternate-images/14_1711550629_reponse_EM_Pos_7_TS_exp_PQ22_page_11.png",
 "alternate-images/14_2014_TS_IEL_reponse_page_8.png",
 "alternate-images/14_reponse_2013c_TS_IEL_page_9.png",
 "alternate-images/14_reponse_2015_IELE_TS_exp_page_8.png",
 "alternate-images/14_reponse_2016_IELE_TS_exp_page_9.png",
+"alternate-images/15_1711550629_reponse_EM_Pos_7_TS_exp_PQ22_page_12.png",
 "alternate-images/15_2014_TS_IEL_reponse_page_9.png",
 "alternate-images/15_reponse_2013c_TS_IEL_page_10.png",
 "alternate-images/15_reponse_2015_IELE_TS_exp_page_8.png",
 "alternate-images/15_reponse_2016_IELE_TS_exp_page_10.png",
+"alternate-images/16_1711550629_reponse_EM_Pos_7_TS_exp_PQ22_page_13.png",
 "alternate-images/16_2014_TS_IEL_reponse_page_10.png",
 "alternate-images/16_reponse_2013c_TS_IEL_page_10.png",
 "alternate-images/16_reponse_2015_IELE_TS_exp_page_9.png",
@@ -315,70 +335,28 @@
 "alternate-images/18_reponse_2016_IELE_TS_exp_page_13.png",
 "alternate-images/19_reponse_2015_PELE_TS_exp_page_13.png",
 "alternate-images/20_reponse_2015_PELE_TS_exp_page_13.png"
-		];
-		// On crée une variable pour stocker l'index de l'image affichée
-		// var index = 0;
-		// On crée une variable pour stocker l'index de l'image affichée
-		// var index = Math.floor(Math.random() * images.length);
-		var index = 0
-
-		// On récupère les éléments HTML correspondants
-		var galerie = document.getElementById("galerie");
-		var suivant = document.getElementById("suivant");
-		var suivalea = document.getElementById("suivalea");
-		var indexHtml = document.getElementById("index");
-
-		// On affiche la première image dans la galerie
-		galerie.innerHTML = "<img src='" + images[index] + "'>";
-		
-		// On affiche l'index actuel sur la page HTML
-		indexHtml.innerHTML = " " + index + " / " + images.length;
-
-		// On ajoute un écouteur d'événement pour le clic sur l'image
-		galerie.addEventListener("click", function() {
-			// On affiche l'image alternative correspondante
-			galerie.innerHTML = "<img src='" + alternateImages[index] + "'>";
-		});
-
-		// On ajoute un écouteur d'événement pour le clic sur le bouton "suivant"
-		suivant.addEventListener("click", function() {
-			// On incrémente l'index de l'image affichée
-			index++;
-			// Si on a atteint la fin du tableau, on revient au début
-			if (index >= images.length) {
-				index = 0;
-			}
-			// On affiche la nouvelle image dans la galerie
-			galerie.innerHTML = "<img src='" + images[index] + "'>";
-				// On affiche l'index actuel sur la page HTML
-			indexHtml.innerHTML = " " + index + " / " + images.length;
-		});
-		
-		// On ajoute un écouteur d'événement pour le clic sur le bouton "suivant"
-		suivalea.addEventListener("click", function() {
-			// On incrémente l'index de l'image affichée de manière aléatoire
-			index = Math.floor(Math.random() * images.length);
-			// Si on a atteint la fin du tableau, on revient au début
-			if (index >= images.length) {
-				index = 0;
-			}
-			// On affiche la nouvelle image dans la galerie
-			galerie.innerHTML = "<img src='" + images[index] + "'>";
-				// On affiche l'index actuel sur la page HTML
-			indexHtml.innerHTML = " " + index + " / " + images.length;
-		});
-
-
-		// On ajoute un écouteur d'événement pour les touches de redirection
-		suivant.addEventListener("keydown", function(event) {
-			if (event.code === "ArrowLeft") {
-				// Si l'utilisateur appuie sur la touche de redirection flèche gauche, on passe à l'image précédente
-				index = (index - 1 + images.length) % images.length;
-				galerie.innerHTML = "<img src='" + images[index] + "'>";
-			}
-		});
-
-	</script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js" integrity="sha512-oyB7lMPtKK/k56l7JlD+hNMDZaS+9S1JvCB/LMnWq3f/ALg4eSW/gQMWGjWd3Pr3Jrks9rON6UQY0G+kgw05cA==" crossorigin="anonymous"></script>
+        ];
+        var index = 0
+        var galerie = document.getElementById("galerie");
+        var suivant = document.getElementById("suivant");
+        var suivalea = document.getElementById("suivalea");
+        var indexHtml = document.getElementById("index");
+        galerie.innerHTML = "<img src='" + images[index] + "'>";
+        indexHtml.innerHTML = " " + index + " / " + images.length;
+        galerie.addEventListener("click", function() {
+            galerie.innerHTML = "<img src='" + alternateImages[index] + "'>";
+        });
+        suivant.addEventListener("click", function() {
+            index = (index + 1) % images.length;
+            galerie.innerHTML = "<img src='" + images[index] + "'>";
+            indexHtml.innerHTML = " " + index + " / " + images.length;
+        });
+        suivalea.addEventListener("click", function() {
+            index = Math.floor(Math.random() * images.length);
+            galerie.innerHTML = "<img src='" + images[index] + "'>";
+            indexHtml.innerHTML = " " + index + " / " + images.length;
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js" integrity="sha512-oyB7lMPtKK/k56l7JlD+hNMDZaS+9S1JvCB/LMnWq3f/ALg4eSW/gQMWGjWd3Pr3Jrks9rON6UQY0G+kgw05cA==" crossorigin="anonymous"></script>
 </body>
 </html>
